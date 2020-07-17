@@ -10,6 +10,6 @@ export class RedheadDuck extends Duck {
   }
 
   public display(): void {
-    console.log('RedheadDuck');
+    console.log('== RedheadDuck:');
   }
 }

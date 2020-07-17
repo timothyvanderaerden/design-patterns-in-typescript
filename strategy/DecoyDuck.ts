@@ -10,6 +10,6 @@ export class DecoyDuck extends Duck {
   }
 
   public display(): void {
-    console.log('DecoyDuck');
+    console.log('== DecoyDuck:');
   }
 }

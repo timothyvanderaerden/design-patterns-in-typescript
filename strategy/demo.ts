@@ -9,23 +9,23 @@ export default function demo(): void {
   const rubber = new RubberDuck();
   const decoy = new DecoyDuck();
 
+  mallard.display();
   mallard.performQuack();
   mallard.performFly();
   mallard.swim();
-  mallard.display();
 
+  redhead.display();
   redhead.performQuack();
   redhead.performFly();
   redhead.swim();
-  redhead.display();
 
+  rubber.display();
   rubber.performQuack();
   rubber.performFly();
   rubber.swim();
-  rubber.display();
 
+  decoy.display();
   decoy.performQuack();
   decoy.performFly();
   decoy.swim();
-  decoy.display();
 }

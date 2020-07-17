@@ -10,6 +10,6 @@ export class RubberDuck extends Duck {
   }
 
   public display(): void {
-    console.log('RubberDuck');
+    console.log('== RubberDuck:');
   }
 }
