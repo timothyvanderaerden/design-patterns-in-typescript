@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/timothyvanderaerden/design-patterns-in-typescript#readme",
   "devDependencies": {
-    "@types/commander": "^2.12.2",
     "@types/node": "^14.0.23",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
