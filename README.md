@@ -18,8 +18,6 @@ Design patterns can be categorized into three different categories.
 
 ### Creational
 
-Following patterns from this category are included in this repository.
-
 * Abstract Factory
 * Builder
 * Factory Method
@@ -27,8 +25,6 @@ Following patterns from this category are included in this repository.
 * Singleton
 
 ### Structural
-
-Following patterns from this category are included in this repository.
 
 * Adapter
 * Bridge
@@ -39,8 +35,6 @@ Following patterns from this category are included in this repository.
 * Proxy
 
 ### Behavioral
-
-Following patterns from this category are included in this repository.
 
 * Chain of Responsibility
 * Command
