@@ -3,9 +3,9 @@ import { IObserver } from './IObserver';
 
 export class WeatherData implements ISubject {
   private observers: Array<IObserver>;
-  declare temperature: number;
-  declare humidity: number;
-  declare pressure: number;
+  private declare temperature: number;
+  private declare humidity: number;
+  private declare pressure: number;
 
   constructor() {
     this.observers = [];

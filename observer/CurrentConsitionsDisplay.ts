@@ -4,8 +4,8 @@ import { ISubject } from './ISubject';
 
 export class CurrentConditionsDisplay implements IObserver, IDisplayElement {
   private weatherData: ISubject;
-  declare temperature: number;
-  declare humidity: number;
+  private declare temperature: number;
+  private declare humidity: number;
 
   constructor(weatherData: ISubject) {
     this.weatherData = weatherData;

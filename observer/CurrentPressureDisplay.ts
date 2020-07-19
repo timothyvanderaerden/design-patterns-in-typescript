@@ -4,7 +4,7 @@ import { ISubject } from './ISubject';
 
 export class CurrentPressureDisplay implements IObserver, IDisplayElement {
   private weatherData: ISubject;
-  declare pressure: number;
+  private declare pressure: number;
 
   constructor(weatherData: ISubject) {
     this.weatherData = weatherData;
