@@ -2,8 +2,8 @@ import { IFlyBehavior } from './behavior/fly/IFlyBehavior';
 import { IQuackBehavior } from './behavior/quack/IQuackBehavior';
 
 export abstract class Duck {
-  declare flyBehavior: IFlyBehavior;
-  declare quackBehavior: IQuackBehavior;
+  protected declare flyBehavior: IFlyBehavior;
+  protected declare quackBehavior: IQuackBehavior;
 
   public abstract display(): void;
 
