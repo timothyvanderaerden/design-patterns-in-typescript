@@ -1,6 +1,7 @@
 import decorator from './decorator/demo';
 import factory from './factory/demo';
 import observer from './observer/demo';
+import singleton from './singleton/demo';
 import strategy from './strategy/demo';
 import { Command } from 'commander';
 
@@ -9,6 +10,7 @@ program
   .option('--decorator', 'Demo decorator pattern.')
   .option('--factory', 'Demo factory pattern.')
   .option('--observer', 'Demo observer pattern.')
+  .option('--singleton', 'Demo singleton pattern.')
   .option('--strategy', 'Demo strategy pattern.')
   .parse(process.argv);
 
@@ -21,6 +23,9 @@ switch(true) {
     break;
   case program.observer:
     observer();
+    break;
+  case program.singleton:
+    singleton();
     break;
   case program.strategy:
     strategy();
