@@ -1,3 +1,4 @@
+import command from './command/demo';
 import decorator from './decorator/demo';
 import factory from './factory/demo';
 import observer from './observer/demo';
@@ -7,27 +8,33 @@ import { Command } from 'commander';
 
 const program = new Command();
 program
+  .storeOptionsAsProperties(false) // this way we can use --command since it is an existing property of Command
+  .option('--command', 'Demo command pattern.')
   .option('--decorator', 'Demo decorator pattern.')
   .option('--factory', 'Demo factory pattern.')
   .option('--observer', 'Demo observer pattern.')
   .option('--singleton', 'Demo singleton pattern.')
   .option('--strategy', 'Demo strategy pattern.')
   .parse(process.argv);
+const opts = program.opts(); // Since we use storeOptionsAsProperties: false
 
 switch(true) {
-  case program.decorator:
+  case opts.command:
+    command();
+    break;
+  case opts.decorator:
     decorator();
     break;
-  case program.factory:
+  case opts.factory:
     factory();
     break;
-  case program.observer:
+  case opts.observer:
     observer();
     break;
-  case program.singleton:
+  case opts.singleton:
     singleton();
     break;
-  case program.strategy:
+  case opts.strategy:
     strategy();
     break;
   default:
