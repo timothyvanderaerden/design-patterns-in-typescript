@@ -1,3 +1,4 @@
+import adapter from './adapter/demo';
 import command from './command/demo';
 import decorator from './decorator/demo';
 import factory from './factory/demo';
@@ -8,7 +9,8 @@ import { Command } from 'commander';
 
 const program = new Command();
 program
-  .storeOptionsAsProperties(false) // this way we can use --command since it is an existing property of Command
+  .storeOptionsAsProperties(false) // This way we can use --command since it is an existing property of Command
+  .option('--adapter', 'Denmo adapter pattern.')
   .option('--command', 'Demo command pattern.')
   .option('--decorator', 'Demo decorator pattern.')
   .option('--factory', 'Demo factory pattern.')
@@ -19,6 +21,9 @@ program
 const opts = program.opts(); // Since we use storeOptionsAsProperties: false
 
 switch(true) {
+  case opts.adapter:
+    adapter();
+    break;
   case opts.command:
     command();
     break;
