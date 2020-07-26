@@ -1,6 +1,7 @@
 import adapter from './adapter/demo';
 import command from './command/demo';
 import decorator from './decorator/demo';
+import facade from './facade/demo';
 import factory from './factory/demo';
 import observer from './observer/demo';
 import singleton from './singleton/demo';
@@ -10,9 +11,10 @@ import { Command } from 'commander';
 const program = new Command();
 program
   .storeOptionsAsProperties(false) // This way we can use --command since it is an existing property of Command
-  .option('--adapter', 'Denmo adapter pattern.')
+  .option('--adapter', 'Demo adapter pattern.')
   .option('--command', 'Demo command pattern.')
   .option('--decorator', 'Demo decorator pattern.')
+  .option('--facade', 'Demo facade pattern.')
   .option('--factory', 'Demo factory pattern.')
   .option('--observer', 'Demo observer pattern.')
   .option('--singleton', 'Demo singleton pattern.')
@@ -29,6 +31,9 @@ switch(true) {
     break;
   case opts.decorator:
     decorator();
+    break;
+  case opts.facade:
+    facade();
     break;
   case opts.factory:
     factory();
