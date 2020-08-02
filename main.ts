@@ -6,6 +6,7 @@ import factory from './factory/demo';
 import observer from './observer/demo';
 import singleton from './singleton/demo';
 import strategy from './strategy/demo';
+import template from './template/demo';
 import { Command } from 'commander';
 
 const program = new Command();
@@ -19,6 +20,7 @@ program
   .option('--observer', 'Demo observer pattern.')
   .option('--singleton', 'Demo singleton pattern.')
   .option('--strategy', 'Demo strategy pattern.')
+  .option('--template', 'Demo template pattern.')
   .parse(process.argv);
 const opts = program.opts(); // Since we use storeOptionsAsProperties: false
 
@@ -46,6 +48,9 @@ switch(true) {
     break;
   case opts.strategy:
     strategy();
+    break;
+  case opts.template:
+    template();
     break;
   default:
     console.log('You need to specify a design pattern.');
