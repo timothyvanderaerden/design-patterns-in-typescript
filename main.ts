@@ -3,6 +3,7 @@ import command from './command/demo';
 import decorator from './decorator/demo';
 import facade from './facade/demo';
 import factory from './factory/demo';
+import iterator from './iterator/demo';
 import observer from './observer/demo';
 import singleton from './singleton/demo';
 import strategy from './strategy/demo';
@@ -17,6 +18,7 @@ program
   .option('--decorator', 'Demo decorator pattern.')
   .option('--facade', 'Demo facade pattern.')
   .option('--factory', 'Demo factory pattern.')
+  .option('--iterator', 'Demo iterator pattern')
   .option('--observer', 'Demo observer pattern.')
   .option('--singleton', 'Demo singleton pattern.')
   .option('--strategy', 'Demo strategy pattern.')
@@ -39,6 +41,9 @@ switch(true) {
     break;
   case opts.factory:
     factory();
+    break;
+  case opts.iterator:
+    iterator();
     break;
   case opts.observer:
     observer();
