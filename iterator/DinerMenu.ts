@@ -32,7 +32,7 @@ export class DinerMenu implements Menu {
     return this.menuItems;
   }
 
-  public createIterator(): Iterator {
+  public createIterator(): Iterator<MenuItem> {
     return new Iterator(this.menuItems);
   }
 }

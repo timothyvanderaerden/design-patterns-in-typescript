@@ -1,18 +1,19 @@
-import { MenuItem } from './MenuItem';
-
-export class Iterator {
-  private items: MenuItem[];
+export class Iterator<T> {
+  private iterator: IterableIterator<T>;
   private index = 0;
+  private length: number;
 
-  constructor(items: MenuItem[]) {
-    this.items = items;
+  constructor(items: T[]) {
+    this.iterator = items[Symbol.iterator]();
+    this.length = items.length;
   }
 
   public hasNext(): boolean {
-    return this.index < this.items.length;
+    return this.index < this.length;
   }
 
-  public next(): MenuItem {
-    return this.items[this.index++];
+  public next(): IteratorResult<T, T> {
+    this.index++;
+    return this.iterator.next();
   }
 }

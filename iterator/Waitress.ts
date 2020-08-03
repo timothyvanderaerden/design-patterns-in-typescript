@@ -1,6 +1,7 @@
 import { PancakeHouseMenu } from './PancakeHouseMenu';
 import { DinerMenu } from './DinerMenu';
 import { Iterator } from './Iterator';
+import { MenuItem } from './MenuItem';
 
 export class Waitress {
   private pancakeHouseMenu: PancakeHouseMenu;
@@ -22,10 +23,10 @@ export class Waitress {
     this.printSpecifiedMenu(dinerIterator);
   }
 
-  private printSpecifiedMenu(iterator: Iterator): void {
+  private printSpecifiedMenu(iterator: Iterator<MenuItem>): void {
     while (iterator.hasNext()) {
       const menuItem = iterator.next();
-      console.log(`${menuItem.getName()}, ${menuItem.getPrice()} -- ${menuItem.getDescription()}`);
+      console.log(`${menuItem.value.getName()}, ${menuItem.value.getPrice()} -- ${menuItem.value.getDescription()}`);
     }
   }
 }
