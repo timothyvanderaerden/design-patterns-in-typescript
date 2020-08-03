@@ -1,5 +1,6 @@
 import adapter from './adapter/demo';
 import command from './command/demo';
+import composite from './composite/demo';
 import decorator from './decorator/demo';
 import facade from './facade/demo';
 import factory from './factory/demo';
@@ -15,6 +16,7 @@ program
   .storeOptionsAsProperties(false) // This way we can use --command since it is an existing property of Command
   .option('--adapter', 'Demo adapter pattern.')
   .option('--command', 'Demo command pattern.')
+  .option('--composite', 'Demo composite pattern.')
   .option('--decorator', 'Demo decorator pattern.')
   .option('--facade', 'Demo facade pattern.')
   .option('--factory', 'Demo factory pattern.')
@@ -32,6 +34,9 @@ switch(true) {
     break;
   case opts.command:
     command();
+    break;
+  case opts.composite:
+    composite();
     break;
   case opts.decorator:
     decorator();
